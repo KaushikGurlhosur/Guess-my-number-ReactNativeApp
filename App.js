@@ -1,16 +1,17 @@
 import {
   ImageBackground,
-  StatusBar,
+  // StatusBar,
   StyleSheet,
   SafeAreaView,
 } from "react-native";
 import * as Updates from "expo-updates";
+import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useState } from "react";
 
 import { useFonts } from "expo-font";
 
-// import AppLoading from "expo-app-loading";
+import AppLoading from "expo-app-loading";
 import * as SplashScreen from "expo-splash-screen";
 
 import StartGameScreen from "./screens/StartGameScreen";
@@ -105,7 +106,8 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="auto" />
+      {/* <StatusBar barStyle="auto" /> */}
+      <StatusBar style="light" />
       <LinearGradient
         colors={[Colors.primary700, Colors.accent500]}
         style={styles.rootScreen}>
